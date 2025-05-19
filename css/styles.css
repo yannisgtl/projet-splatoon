@@ -66,3 +66,38 @@ footer {
   margin-top: 2rem;
   color: var(--fond);
 }
+
+
+/* À Propos - Cartes développeurs */
+
+.cartes-developpeurs {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.carte {
+  background-color: var(--violet);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  color: var(--texte);
+  width: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s;
+}
+
+.carte:hover {
+  transform: scale(1.05);
+}
+
+.carte img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent);
+}
