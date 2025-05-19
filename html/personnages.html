@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splatoon - Personnages</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Personnages</h1>
-    <nav>
-      <ul>
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="modes.html">Modes de jeu</a></li>
-        <li><a href="personnages.html" class="active">Personnages</a></li>
-        <li><a href="lieux.html">Lieux</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Splatoon - Personnages</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Personnages</h1>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="modes.html">Modes de jeu</a></li>
+                    <li>
+                        <a href="personnages.html" class="active"
+                            >Personnages</a
+                        >
+                    </li>
+                    <li><a href="lieux.html">Lieux</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <main>
-  <section>
-    <h2>Personnages de Splatoon 1</h2>
+        <main>
+            <section>
+                <h2>Personnages de Splatoon</h2>
 
-    <div class="carrousel">
-      <button id="prev">&#8592;</button>
+                <div class="carrousel">
+                    <div class="carte-personnage" id="carte-personnage">
+                        <img
+                            id="image-personnage"
+                            src="../img/inkling1.png"
+                            alt="Inkling 1"
+                        />
+                        <div class="description">
+                            <h3 id="nom-personnage">Inkling Garçon</h3>
+                            <p id="texte-personnage">
+                                Un Inkling prêt à en découdre, armé de son
+                                liquidateur classique.
+                            </p>
+                        </div>
+                    </div>
 
-      <div class="carte-personnage" id="carte-personnage">
-        <img id="image-personnage" src="../img/inkling1.png" alt="Inkling 1" />
-        <div class="description">
-          <h3 id="nom-personnage">Inkling Garçon</h3>
-          <p id="texte-personnage">Un Inkling prêt à en découdre, armé de son liquidateur classique.</p>
-        </div>
-      </div>
+                    <div class="boutons-navigation">
+                        <button id="prev">&#8592;</button>
+                        <button id="next">&#8594;</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="../js/carrousel.js"></script>
 
-      <button id="next">&#8594;</button>
-    </div>
-  </section>
-</main>
-<script src="../js/carrousel.js"></script>
-
-
-  <footer>
-    <p>&copy; 2025 Yannis Kouassi - Saphir Miermont--Dominguez</p>
-  </footer>
-</body>
+        <footer>
+            <p>&copy; 2025 Yannis Kouassi - Saphir Miermont--Dominguez</p>
+        </footer>
+    </body>
 </html>

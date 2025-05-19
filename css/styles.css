@@ -1,156 +1,197 @@
 /* Couleurs inspirées de Splatoon */
 :root {
-  --rose: #ff33cc;
-  --vert: #99ff33;
-  --violet: #9933ff;
-  --orange: #ff6633;
-  --fond: #1a1a1a;
-  --texte: #ffffff;
-  --accent: var(--rose);
+    --rose: #ff33cc;
+    --vert: #99ff33;
+    --violet: #9933ff;
+    --orange: #ff6633;
+    --fond: #1a1a1a;
+    --texte: #ffffff;
+    --accent: var(--rose);
+}
+
+html,
+body {
+    height: 100%;
 }
 
 body {
-  margin: 0;
-  font-family: 'Arial', sans-serif;
-  background-color: var(--fond);
-  color: var(--texte);
+    margin: 0;
+    font-family: "Arial", sans-serif;
+    background-color: var(--fond);
+    color: var(--texte);
 }
 
 header {
-  background-color: var(--accent);
-  padding: 1rem;
-  text-align: center;
+    background-color: var(--accent);
+    padding: 1rem;
+    text-align: center;
 }
 
 header h1 {
-  margin: 0;
-  font-size: 2rem;
-  color: var(--fond);
+    margin: 0;
+    font-size: 2rem;
+    color: var(--fond);
 }
 
 nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 1rem 0 0 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 1rem 0 0 0;
 }
 
 nav a {
-  color: var(--texte);
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s;
+    color: var(--texte);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
 nav a:hover,
 nav a.active {
-  color: var(--vert);
+    color: var(--vert);
 }
 
 main {
-  padding: 2rem;
-  text-align: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
 }
 
 .intro h2 {
-  color: var(--violet);
-  font-size: 1.8rem;
+    color: var(--violet);
+    font-size: 1.8rem;
 }
 
 footer {
-  background-color: var(--accent);
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-  color: var(--fond);
+    background-color: var(--accent);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    color: var(--fond);
 }
-
 
 /* Personnages - Carrousel */
 
 .carrousel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem 0;
+    flex-wrap: wrap;
 }
 
 .carte-personnage {
-  display: flex;
-  background-color: var(--rose);
-  border-radius: 1rem;
-  padding: 1rem;
-  align-items: center;
-  gap: 1.5rem;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  max-width: 700px;
-  width: 100%;
-  transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--rose);
+    border-radius: 1rem;
+    padding: 1rem;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .carte-personnage img {
-  width: 150px;
-  height: 150px;
-  border-radius: 1rem;
-  object-fit: cover;
-  border: 3px solid var(--accent);
+    width: 150px;
+    height: 150px;
+    border-radius: 1rem;
+    object-fit: cover;
+    border: 3px solid var(--accent);
 }
 
 .description {
-  flex: 1;
+    flex: 1;
+    text-align: left;
 }
 
-.carrousel button {
-  background-color: var(--violet);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  cursor: pointer;
-  transition: background 0.2s;
+.boutons-navigation {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
 }
 
-.carrousel button:hover {
-  background-color: var(--accent);
+.boutons-navigation button {
+    background-color: var(--violet);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
+.boutons-navigation button:hover {
+    background-color: var(--accent);
+}
+
+/* Responsive pour mobile : vertical */
+@media (max-width: 600px) {
+    .carte-personnage {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .description {
+        text-align: center;
+    }
+
+    .carte-personnage img {
+        width: 120px;
+        height: 120px;
+    }
+}
 
 /* À Propos - Cartes développeurs */
 
 .cartes-developpeurs {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 
 .carte {
-  background-color: var(--violet);
-  padding: 1rem;
-  border-radius: 1rem;
-  text-align: center;
-  color: var(--texte);
-  width: 200px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s;
+    background-color: var(--violet);
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    color: var(--texte);
+    width: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
 }
 
 .carte:hover {
-  transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .carte img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  border: 3px solid var(--accent);
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--accent);
 }
