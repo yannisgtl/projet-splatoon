@@ -9,12 +9,13 @@
     --accent: var(--rose);
 }
 
-html,
-body {
+html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
 body {
+    height: 100%;
     margin: 0;
     font-family: "Arial", sans-serif;
     background-color: var(--fond);
@@ -25,6 +26,7 @@ header {
     background-color: var(--accent);
     padding: 1rem;
     text-align: center;
+    position: static;
 }
 
 header h1 {
@@ -85,7 +87,7 @@ footer {
     display: flex;
 }
 
-/* Barre latérale fixe */
+/** Barre latérale fixe **/
 .sidebar {
     position: sticky;
     top: 0;
@@ -114,13 +116,13 @@ footer {
     color: var(--accent);
 }
 
-/* Partie principale */
+/** Partie principale **/
 .lieux {
     flex: 1;
     scroll-behavior: smooth;
 }
 
-/* Sections */
+/** Sections **/
 .lieu {
     padding: 4rem 2rem;
     min-height: 100vh;
@@ -146,7 +148,7 @@ footer {
     font-size: 1.2rem;
 }
 
-/* Ajustement pour mobile */
+/** Ajustement pour mobile **/
 @media (max-width: 768px) {
     .conteneur-lieux {
         flex-direction: column;
@@ -170,6 +172,19 @@ footer {
     .sidebar li {
         margin: 0.5rem;
     }
+}
+
+/** Lieux - Animation **/
+
+.animation-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animation-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 
