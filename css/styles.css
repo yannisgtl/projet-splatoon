@@ -1,8 +1,68 @@
+/* Couleurs inspirées de Splatoon */
+:root {
+  --rose: #ff33cc;
+  --vert: #99ff33;
+  --violet: #9933ff;
+  --orange: #ff6633;
+  --fond: #1a1a1a;
+  --texte: #ffffff;
+  --accent: var(--rose);
+}
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--fond);
+  color: var(--texte);
+}
+
 header {
-    color: white;
-    background-color: #5cd05b;
-    height: 5em;
-    display: block;
-    text-align: justify;
-    text;
+  background-color: var(--accent);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  color: var(--fond);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0 0 0;
+}
+
+nav a {
+  color: var(--texte);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+  color: var(--vert);
+}
+
+main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.intro h2 {
+  color: var(--violet);
+  font-size: 1.8rem;
+}
+
+footer {
+  background-color: var(--accent);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  color: var(--fond);
 }
