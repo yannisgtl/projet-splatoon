@@ -1,34 +1,65 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splatoon - Lieux</title>
-  <link rel="stylesheet" href="../css/styles.css" />
-</head>
-<body>
-  <header>
-    <h1>Lieux</h1>
-    <nav>
-      <ul>
-        <li><a href="accueil.html">Accueil</a></li>
-        <li><a href="modes.html">Modes de jeu</a></li>
-        <li><a href="personnages.html">Personnages</a></li>
-        <li><a href="lieux.html" class="active">Lieux</a></li>
-        <li><a href="apropos.html">À propos</a></li>
-      </ul>
-    </nav>
-  </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Splatoon - Lieux</title>
+        <link rel="stylesheet" href="../css/styles.css" />
+    </head>
+    <body>
+        <header>
+            <h1>Lieux</h1>
+            <nav>
+                <ul>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="modes.html">Modes de jeu</a></li>
+                    <li><a href="personnages.html">Personnages</a></li>
+                    <li><a href="lieux.html" class="active">Lieux</a></li>
+                    <li><a href="apropos.html">À propos</a></li>
+                </ul>
+            </nav>
+        </header>
 
-  <main>
-    <section>
-      <h2>Les arènes de combat</h2>
-      <p>Présentation à venir...</p>
-    </section>
-  </main>
+        <div class="conteneur-lieux">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#lieu1">Chromapolis</a></li>
+                    <li><a href="#lieu2">Centre Arowana</a></li>
+                    <li><a href="#lieu3">Parc Carapince</a></li>
+                    <li><a href="#lieu4">Hippo-Camping</a></li>
+                </ul>
+            </aside>
 
-  <footer>
-    <p>&copy; 2025 Yannis Kouassi - Saphir Miermont--Dominguez</p>
-  </footer>
-</body>
+            <main class="lieux">
+                <section id="lieu1" class="lieu lieu-a">
+                    <h2>Chromapolis</h2>
+                    <p>
+                        Centre névralgique du monde des Inklings. C’est ici que
+                        tout commence !
+                    </p>
+                </section>
+                <section id="lieu2" class="lieu lieu-b">
+                    <h2>Centre Arowana</h2>
+                    <p>
+                        Un terrain étroit et vertical, parfait pour les snipers.
+                    </p>
+                </section>
+                <section id="lieu3" class="lieu lieu-a">
+                    <h2>Parc Carapince</h2>
+                    <p>Un parc aquatique transformé en arène colorée.</p>
+                </section>
+                <section id="lieu4" class="lieu lieu-b">
+                    <h2>Hippo-Camping</h2>
+                    <p>
+                        Un complexe sportif moderne et glissant, idéal pour les
+                        batailles rapides.
+                    </p>
+                </section>
+            </main>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Yannis Kouassi - Saphir Miermont--Dominguez</p>
+        </footer>
+    </body>
 </html>

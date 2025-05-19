@@ -79,6 +79,100 @@ footer {
     color: var(--fond);
 }
 
+/* Lieux */
+
+.conteneur-lieux {
+    display: flex;
+}
+
+/* Barre latérale fixe */
+.sidebar {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 180px;
+    background-color: var(--violet);
+    padding: 1rem;
+    color: white;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 1rem 0;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--accent);
+}
+
+/* Partie principale */
+.lieux {
+    flex: 1;
+    scroll-behavior: smooth;
+}
+
+/* Sections */
+.lieu {
+    padding: 4rem 2rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lieu-a {
+    background-color: var(--rose);
+}
+
+.lieu-b {
+    background-color: var(--bleu);
+}
+
+.lieu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.lieu p {
+    font-size: 1.2rem;
+}
+
+/* Ajustement pour mobile */
+@media (max-width: 768px) {
+    .conteneur-lieux {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        background-color: var(--violet);
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .sidebar li {
+        margin: 0.5rem;
+    }
+}
+
+
 /* Personnages - Carrousel */
 
 .carrousel {
