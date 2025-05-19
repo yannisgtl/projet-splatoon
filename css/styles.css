@@ -23,10 +23,15 @@ body {
 }
 
 header {
-    background-color: var(--accent);
-    padding: 1rem;
-    text-align: center;
-    position: static;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--violet);
+    color: white;
+    padding: 1rem 2rem;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 header h1 {
@@ -36,19 +41,19 @@ header h1 {
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
     gap: 2rem;
-    margin: 1rem 0 0 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 nav a {
-    color: var(--texte);
+    color: white;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.2s ease-in-out;
 }
 
 nav a:hover,
@@ -66,6 +71,7 @@ main {
     box-sizing: border-box;
     position: relative;
     text-align: center;
+    padding-top: 80px;
 }
 
 .intro h2 {
@@ -90,12 +96,13 @@ footer {
 /** Barre latérale fixe **/
 .sidebar {
     position: sticky;
-    top: 0;
+    top: 80px;
     height: 100vh;
     width: 180px;
     background-color: var(--violet);
     padding: 1rem;
     color: white;
+    margin-top: 80px;
 }
 
 .sidebar ul {
@@ -177,16 +184,15 @@ footer {
 /** Lieux - Animation **/
 
 .animation-scroll {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .animation-scroll.visible {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
-
 
 /* Personnages - Carrousel */
 
