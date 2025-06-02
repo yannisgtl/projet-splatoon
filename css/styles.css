@@ -70,10 +70,11 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 2rem 1rem;
     position: relative;
     text-align: center;
     padding-top: 90px;
+    background-repeat:repeat-y;
+    background-size: cover;
 }
 
 .intro h2 {

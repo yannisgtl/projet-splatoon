@@ -48,34 +48,32 @@ const personnages = [
     + "Boss final du jeu.\n",
   },
   {
-    nom: "",
-    image: "../img/",
-    description: "",
+    nom: "Octariens",
+    image: "../img/Octariens.png",
+    description: "Soldats de l'armée Octarienne et adversaires de l'agent 3 dans les niveaux.\n"
+    +  "Il y a une multitude de types différents avec des capacités et points faibles divers.\n",
   },
   {
-    nom: "",
-    image: "../img/",
-    description: "",
+    nom: "Octalings",
+    image: "../img/Octaling_full.png",
+    description: "Font partie de la société Octarienne et de leur armée.\n"
+    + "Elles ont les mêmes capacités que les Inklings et sont leur équivalent chez les Octariens, bien que celles qu'on affronte dans les niveaux sont plus âgées que l'agent 3.\n" 
+    + "Elles portent toutes le même uniforme.\n"
+    + "Les Octalings de rang supérieur ont des tentacules plus foncés et des algues accrochées sur les côtés de leurs têtes.\n",
   },
   {
-    nom: "",
-    image: "../img/",
-    description: "",
+    nom: "Poisson-charge",
+    image: "../img/Zapfish.jpg",
+    description: "Sources d'énergie électrique.\n"
+    + "Ils sont retenus en captivité par les Octariens pour servir de source d'énergie.\n"
+    + "On les récupère à la fin de chaque niveau.\n",
   },
   {
-    nom: "",
-    image: "../img/",
-    description: "",
-  },
-  {
-    nom: "",
-    image: "../img/",
-    description: "",
-  },
-  {
-    nom: "",
-    image: "../img/",
-    description: "",
+    nom: "Grand Poisson-charge",
+    image: "../img/Great_Zapfish.png",
+    description: "L'une des sources d'énergie électrique principales de Chromapolis.\n"
+    + "Volé par DJ Octave pour servir de source d'énergie pour son peuple et son armée.\n"
+    + "Une fois récupéré à la fin du mode héro du jeu, on peut le retrouver enroulé sur la tour de Chromapolis dans la place de Chromapolis.\n",
   }
 ];
 
