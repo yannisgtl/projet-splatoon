@@ -15,11 +15,13 @@ html {
 }
 
 body {
-    height: 100%;
     margin: 0;
     font-family: "Arial", sans-serif;
     background-color: var(--fond);
     color: var(--texte);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -27,6 +29,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    height: 60px; /* 92 avec le padding */
     background-color: var(--violet);
     color: white;
     padding: 1rem 2rem;
@@ -68,7 +71,6 @@ main {
     justify-content: center;
     flex-direction: column;
     padding: 2rem 1rem;
-    box-sizing: border-box;
     position: relative;
     text-align: center;
     padding-top: 90px;
@@ -83,26 +85,29 @@ footer {
     background-color: var(--accent);
     text-align: center;
     padding: 1rem;
-    margin-top: 2rem;
     color: var(--fond);
 }
 
 /* Lieux */
 
 .conteneur-lieux {
-    display: flex;
+    /* display: flex; */
+    height: 100vh;
+    flex: 1;
+    margin-top: 92px;
 }
 
 /** Barre latérale fixe **/
 .sidebar {
-    position: sticky;
-    top: 80px;
-    height: 100vh;
-    width: 180px;
-    background-color: var(--violet);
-    padding: 1rem;
+    width: 15%;
+    height: calc(100% - 92px);
+    background-color: #111;
     color: white;
-    margin-top: 80px;
+    position: fixed;
+    top: 92px;
+    bottom: 82px;
+    align-self: flex-start;
+    padding: 1rem;
 }
 
 .sidebar ul {
@@ -125,17 +130,34 @@ footer {
 
 /** Partie principale **/
 .lieux {
-    flex: 1;
+    margin-left: 15%;
+    width: 85%;
     scroll-behavior: smooth;
+    padding: 0;
 }
 
 /** Sections **/
+
 .lieu {
-    padding: 4rem 2rem;
-    min-height: 100vh;
+    width: 100%;
+    height: calc(100vh - 92px);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    position: relative;
+    color: white;
+}
+
+.lieu-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    max-width: 800px;
+    backdrop-filter: blur(3px);
 }
 
 .lieu-a {
@@ -153,6 +175,7 @@ footer {
 
 .lieu p {
     font-size: 1.2rem;
+    line-height: 1.6;
 }
 
 /** Ajustement pour mobile **/
