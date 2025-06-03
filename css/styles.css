@@ -111,8 +111,8 @@ footer {
 /** Barre latérale fixe **/
 .sidebar {
     width: 15%;
-    height: calc(100% - 92px);
-    background-color: #111;
+    height: calc(100% - 224px);
+    background-color: var(--fond);
     color: white;
     position: fixed;
     top: 92px;
